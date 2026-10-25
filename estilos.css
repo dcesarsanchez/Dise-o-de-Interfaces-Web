@@ -1,0 +1,193 @@
+/* ==========================================================
+   ESTILOS GENERALES Y VARIABLES
+   ========================================================== */
+:root {
+  --color-primario: #0B1D2A;   /* Azul marino corporativo */
+  --color-fondo: #FFFFFF;      /* Blanco puro */
+  --color-tarjeta: #E5E5E5;    /* Gris claro para contenedores */
+  --color-texto: #1E1E1E;      /* Texto oscuro */
+  --color-blanco: #FFFFFF;
+  --fuente-principal: 'Arial', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  max-width: 1200px;
+  width: 90%;
+  margin: 40px auto;
+  flex: 1;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+/* ==========================================================
+   HEADER Y NAVEGACIÓN
+   ========================================================== */
+header {
+  background-color: var(--color-primario);
+  padding: 20px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 60px;
+}
+
+nav a {
+  color: var(--color-blanco);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: opacity 0.2s;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+footer {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* ==========================================================
+   ESTILOS - PÁGINA 1: INICIO
+   ========================================================== */
+.inicio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.favicon-box {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.caja-texto {
+  background-color: var(--color-tarjeta);
+  padding: 25px;
+  border-radius: 4px;
+  margin-bottom: 25px;
+}
+
+.caja-texto h2 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.caja-texto p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.imagen-experiencia img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+}
+
+/* ==========================================================
+   ESTILOS - PÁGINA 2: EL CENTRO (MAQUETACIÓN FLEXBOX)
+   ========================================================== */
+.contenedor-flex {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.tarjeta-flex {
+  background-color: var(--color-tarjeta);
+  padding: 20px;
+  border-radius: 4px;
+  flex: 1; /* Permite que las 3 tarjetas ocupen el mismo espacio */
+}
+
+.tarjeta-flex h3 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.tarjeta-flex p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.imagen-centro-box {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.imagen-centro-box img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+/* ==========================================================
+   ESTILOS - PÁGINA 3: MIS ESTUDIOS (MAQUETACIÓN CSS GRID)
+   ========================================================== */
+.contenedor-grid-modulos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 Columnas idénticas */
+  gap: 25px;
+}
+
+.tarjeta-grid {
+  background-color: var(--color-tarjeta);
+  padding: 25px;
+  border-radius: 4px;
+}
+
+.tarjeta-grid h3 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.tarjeta-grid p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
